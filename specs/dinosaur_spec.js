@@ -1,6 +1,5 @@
 const assert = require('assert');
 const Dinosaur = require('../dinosaur');
-const Park = require('../park');
 
 let dinosaur;
 
@@ -21,7 +20,3 @@ describe('Dinosaur', function () {
   });
 
 });
-
-// Dinosaur:
-// should have a type
-// should have a number of offspring per year
