@@ -7,14 +7,13 @@ Park.prototype.addDinosaur = function(dinosaur){
 }
 
 Park.prototype.removeAllDinosaursByType = function(type){
-  console.log("enclosure", this.enclosure);
 
-  for (let dinosaur of this.enclosure){
-    if (dinosaur.type === type){
-      console.log("dinosaur type", dinosaur.type);
-      const index = this.enclosure.indexOf(dinosaur);
-      this.enclosure.splice(index, 1);
-    }
+  const dinosaursToKeep = [];
+  for (const dinosaur of this.enclosure){
+    if(dinosaur.type !== type) dinosaursToKeep.push(dinosaur);
+  }
+  this.enclosure = dinosaursToKeep;
+
 }
 
 Park.prototype.getAllDinosaursOffSpringCountExceedsNumber = function(number){
